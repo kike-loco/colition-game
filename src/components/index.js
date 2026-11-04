@@ -1,11 +1,11 @@
-export Board from './Board';
-export DebugState from './DebugState';
-export Enemy from './Enemy';
-export GameInfo from './GameInfo';
-export Player from './Player';
-export Square from './Square';
-export Control from './Control';
-export Intro from './Intro';
-export Form from './Form';
-export Top from './Top';
-export GameButton from './GameButton';
+export { default as Board } from './Board'
+export { default as DebugState } from './DebugState'
+export { default as Enemy } from './Enemy'
+export { default as GameInfo } from './GameInfo'
+export { default as Player } from './Player'
+export { default as Square } from './Square'
+export { default as Control } from './Control'
+export { default as Intro } from './Intro'
+export { default as Form } from './Form'
+export { default as Top } from './Top'
+export { default as GameButton } from './GameButton'
