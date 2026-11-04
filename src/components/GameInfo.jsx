@@ -1,7 +1,8 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 import careful from '../sprites/cuidado.png'
 import GameButton from './GameButton'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Grid as Container, Row, Col } from 'react-bootstrap'
 import flower from '../sprites/flower.png'
 
 const infoStyle = {

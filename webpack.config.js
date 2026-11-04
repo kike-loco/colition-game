@@ -1,30 +1,38 @@
+const path = require('path')
+
 module.exports = {
-  entry: [
-    './src/index.js'
-  ],
+  entry: ['./src/index.js'],
   output: {
     filename: 'bundle.js',
-    path: '/'
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/'
   },
   module: {
-    loaders: [
+    rules: [
       {
-        test: /.(js|jsx)$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        loader: 'babel',
-        query: {
-          presets: ['react', 'es2015', 'stage-1']
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env', '@babel/preset-react']
+          }
         }
       },
       {
         test: /\.(gif|svg|jpg|png)$/,
-        loader: 'file-loader'
+        type: 'asset/resource'
       }
     ]
   },
-  devtool: 'eval',
   resolve: {
-    extensions: ['', '.js', '.jsx'],
-    modulesDirectories: ['src', 'node_modules']
-  }
+    extensions: ['.js', '.jsx'],
+    modules: [path.resolve(__dirname, 'src'), 'node_modules']
+  },
+  devServer: {
+    static: { directory: path.join(__dirname, 'src') },
+    port: 8080,
+    hot: true
+  },
+  devtool: 'eval-source-map'
 }

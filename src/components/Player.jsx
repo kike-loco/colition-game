@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { Square } from 'components'
 import { UP, DOWN, LEFT, RIGHT } from 'helpers/constants'
 import jaguar from '../sprites/jaguar.png'

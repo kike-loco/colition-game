@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { Square } from 'components'
 import ship1 from '../sprites/ship1.png'
 import ship2 from '../sprites/ship2.png'
